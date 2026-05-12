@@ -1,0 +1,573 @@
+{
+  "pages": [
+    {
+      "id": "PAGE-001",
+      "name": "Landing / Timer Home",
+      "route": "/",
+      "layoutRegions": [
+        "Header",
+        "Mode selector",
+        "Timer display card",
+        "Timer controls",
+        "Focus task input",
+        "Daily stats summary",
+        "Task list panel",
+        "Footer"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-001",
+          "name": "Pomodoro tab",
+          "type": "tab",
+          "location": "Mode selector",
+          "interaction": "Click",
+          "effect": "Activates Pomodoro mode and updates timer duration"
+        },
+        {
+          "id": "CMP-002",
+          "name": "Short Break tab",
+          "type": "tab",
+          "location": "Mode selector",
+          "interaction": "Click",
+          "effect": "Activates short break mode"
+        },
+        {
+          "id": "CMP-003",
+          "name": "Long Break tab",
+          "type": "tab",
+          "location": "Mode selector",
+          "interaction": "Click",
+          "effect": "Activates long break mode"
+        },
+        {
+          "id": "CMP-004",
+          "name": "Start/Pause button",
+          "type": "button",
+          "location": "Timer controls",
+          "interaction": "Click",
+          "effect": "Starts or pauses countdown; label updates"
+        },
+        {
+          "id": "CMP-005",
+          "name": "Reset button",
+          "type": "button",
+          "location": "Timer controls",
+          "interaction": "Click",
+          "effect": "Resets timer to full duration"
+        },
+        {
+          "id": "CMP-006",
+          "name": "Skip button",
+          "type": "button",
+          "location": "Timer controls",
+          "interaction": "Click",
+          "effect": "Moves to next session mode"
+        },
+        {
+          "id": "CMP-007",
+          "name": "Current focus input",
+          "type": "input",
+          "location": "Focus task input",
+          "interaction": "Type + Enter",
+          "effect": "Saves current focus label"
+        },
+        {
+          "id": "CMP-008",
+          "name": "Add task input",
+          "type": "input",
+          "location": "Task list panel",
+          "interaction": "Type",
+          "effect": "Enters task draft text"
+        },
+        {
+          "id": "CMP-009",
+          "name": "Add task button",
+          "type": "button",
+          "location": "Task list panel",
+          "interaction": "Click",
+          "effect": "Adds task to list if valid"
+        },
+        {
+          "id": "CMP-010",
+          "name": "Task checkbox",
+          "type": "checkbox",
+          "location": "Task list panel",
+          "interaction": "Click",
+          "effect": "Marks task complete/incomplete"
+        },
+        {
+          "id": "CMP-011",
+          "name": "Task delete button",
+          "type": "icon-button",
+          "location": "Task list panel",
+          "interaction": "Click",
+          "effect": "Removes task from list"
+        },
+        {
+          "id": "CMP-012",
+          "name": "Settings button",
+          "type": "icon-button",
+          "location": "Header",
+          "interaction": "Click",
+          "effect": "Opens settings modal"
+        },
+        {
+          "id": "CMP-013",
+          "name": "Help link",
+          "type": "link",
+          "location": "Footer",
+          "interaction": "Click",
+          "effect": "Navigates to About page"
+        }
+      ],
+      "staticElements": [
+        "Logo/site title",
+        "Countdown text",
+        "Progress ring/bar",
+        "Current mode label",
+        "Daily completed sessions counter",
+        "Cycle progress text",
+        "Completion/status message area",
+        "Footer text/help link"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "success"
+      ]
+    },
+    {
+      "id": "PAGE-002",
+      "name": "Settings Modal",
+      "route": "modal:/settings",
+      "layoutRegions": [
+        "Modal header",
+        "Timing settings group",
+        "Behavior settings group",
+        "Notification settings group",
+        "Modal footer actions",
+        "Header: Modal title",
+        "Body: Settings form fields",
+        "Footer: Save and Cancel buttons"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-014",
+          "name": "Pomodoro duration input",
+          "type": "input",
+          "location": "Timing settings group",
+          "interaction": "Type/change",
+          "effect": "Updates form value with validation"
+        },
+        {
+          "id": "CMP-015",
+          "name": "Short break duration input",
+          "type": "input",
+          "location": "Timing settings group",
+          "interaction": "Type/change",
+          "effect": "Updates form value with validation"
+        },
+        {
+          "id": "CMP-016",
+          "name": "Long break duration input",
+          "type": "input",
+          "location": "Timing settings group",
+          "interaction": "Type/change",
+          "effect": "Updates form value with validation"
+        },
+        {
+          "id": "CMP-017",
+          "name": "Cycle length input",
+          "type": "input",
+          "location": "Timing settings group",
+          "interaction": "Type/change",
+          "effect": "Updates long-break cycle count"
+        },
+        {
+          "id": "CMP-018",
+          "name": "Sound toggle",
+          "type": "toggle",
+          "location": "Behavior settings group",
+          "interaction": "Click",
+          "effect": "Enables/disables sound preference"
+        },
+        {
+          "id": "CMP-019",
+          "name": "Auto-start breaks toggle",
+          "type": "toggle",
+          "location": "Behavior settings group",
+          "interaction": "Click",
+          "effect": "Enables/disables automatic break start"
+        },
+        {
+          "id": "CMP-020",
+          "name": "Auto-start pomodoros toggle",
+          "type": "toggle",
+          "location": "Behavior settings group",
+          "interaction": "Click",
+          "effect": "Enables/disables automatic pomodoro start"
+        },
+        {
+          "id": "CMP-021",
+          "name": "Browser notifications toggle",
+          "type": "toggle",
+          "location": "Notification settings group",
+          "interaction": "Click",
+          "effect": "Requests permission and stores preference"
+        },
+        {
+          "id": "CMP-022",
+          "name": "Reset defaults button",
+          "type": "button",
+          "location": "Modal footer actions",
+          "interaction": "Click",
+          "effect": "Restores default settings values"
+        },
+        {
+          "id": "CMP-023",
+          "name": "Save button",
+          "type": "button",
+          "location": "Modal footer actions",
+          "interaction": "Click",
+          "effect": "Saves settings and closes modal"
+        },
+        {
+          "id": "CMP-024",
+          "name": "Close button",
+          "type": "icon-button",
+          "location": "Modal header",
+          "interaction": "Click",
+          "effect": "Closes modal without explicit save action"
+        },
+        {
+          "id": "CMP-025",
+          "name": "Pomodoro Duration Input",
+          "type": "input",
+          "location": "Body",
+          "interaction": "Type",
+          "effect": "Numeric input accepted; updates duration setting"
+        },
+        {
+          "id": "CMP-026",
+          "name": "Save Settings Button",
+          "type": "button",
+          "location": "Footer",
+          "interaction": "Click",
+          "effect": "Settings saved; modal closes"
+        },
+        {
+          "id": "CMP-027",
+          "name": "Cancel Button",
+          "type": "button",
+          "location": "Footer",
+          "interaction": "Click",
+          "effect": "Modal closes without saving"
+        }
+      ],
+      "staticElements": [
+        "Modal title",
+        "Validation messages",
+        "Settings labels",
+        "Duration input labels"
+      ],
+      "states": [
+        "loading",
+        "error",
+        "success",
+        "default",
+        "editing"
+      ]
+    },
+    {
+      "id": "PAGE-003",
+      "name": "Help / About Page",
+      "route": "/about",
+      "layoutRegions": [
+        "Header",
+        "Intro hero",
+        "Instruction content",
+        "FAQ section",
+        "Footer"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-028",
+          "name": "FAQ item header",
+          "type": "accordion",
+          "location": "FAQ section",
+          "interaction": "Click",
+          "effect": "Expands/collapses answer"
+        },
+        {
+          "id": "CMP-029",
+          "name": "Back to Timer button",
+          "type": "button",
+          "location": "Footer",
+          "interaction": "Click",
+          "effect": "Returns to home page"
+        }
+      ],
+      "staticElements": [
+        "Site title/logo",
+        "About heading",
+        "Intro text",
+        "Step cards",
+        "Footer links/text"
+      ],
+      "states": [
+        "loading",
+        "error",
+        "success"
+      ]
+    },
+    {
+      "id": "PAGE-004",
+      "name": "404 Error Page",
+      "route": "/404",
+      "layoutRegions": [
+        "Centered error content block",
+        "Header: Error message",
+        "Body: Navigation options"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-030",
+          "name": "Go Home button",
+          "type": "button",
+          "location": "Centered error content block",
+          "interaction": "Click",
+          "effect": "Navigates to home page"
+        },
+        {
+          "id": "CMP-031",
+          "name": "Go Home Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Navigates to home page"
+        }
+      ],
+      "staticElements": [
+        "404 heading",
+        "Explanatory text",
+        "Error message",
+        "Page not found label"
+      ],
+      "states": [
+        "loading",
+        "success",
+        "default"
+      ]
+    },
+    {
+      "id": "PAGE-005",
+      "name": "Session Complete Toast",
+      "route": "transient:/session-complete",
+      "layoutRegions": [
+        "Toast body",
+        "Action area"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-032",
+          "name": "Dismiss button",
+          "type": "icon-button",
+          "location": "Toast body",
+          "interaction": "Click",
+          "effect": "Hides toast"
+        },
+        {
+          "id": "CMP-033",
+          "name": "Start next button",
+          "type": "button",
+          "location": "Action area",
+          "interaction": "Click",
+          "effect": "Starts next session or switches mode"
+        }
+      ],
+      "staticElements": [
+        "Completion text"
+      ],
+      "states": [
+        "empty",
+        "error",
+        "success"
+      ]
+    },
+    {
+      "id": "PAGE-006",
+      "name": "Home",
+      "route": "/",
+      "layoutRegions": [
+        "Header: Timer modes + primary actions",
+        "Body: Timer display + task list",
+        "Sidebar: Settings + statistics"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-034",
+          "name": "Start Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Timer starts; button shows active state"
+        },
+        {
+          "id": "CMP-035",
+          "name": "Pause Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Timer pauses; button shows paused state"
+        },
+        {
+          "id": "CMP-036",
+          "name": "Reset Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Timer resets to full duration"
+        },
+        {
+          "id": "CMP-037",
+          "name": "Mode Tabs",
+          "type": "tab",
+          "location": "Header",
+          "interaction": "Click",
+          "effect": "Switches timer mode; tab shows active state"
+        },
+        {
+          "id": "CMP-038",
+          "name": "Task Input",
+          "type": "input",
+          "location": "Body",
+          "interaction": "Type",
+          "effect": "Text appears in input field; task can be added"
+        },
+        {
+          "id": "CMP-039",
+          "name": "Add Task Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "New task added to list"
+        },
+        {
+          "id": "CMP-040",
+          "name": "Complete Task Checkbox",
+          "type": "checkbox",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Task marked as complete; checkbox shows checked state"
+        },
+        {
+          "id": "CMP-041",
+          "name": "Delete Task Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Task removed from list"
+        },
+        {
+          "id": "CMP-042",
+          "name": "Settings Button",
+          "type": "button",
+          "location": "Sidebar",
+          "interaction": "Click",
+          "effect": "Settings modal opens"
+        }
+      ],
+      "staticElements": [
+        "Timer display",
+        "Task list heading",
+        "Mode labels"
+      ],
+      "states": [
+        "default",
+        "running",
+        "paused",
+        "completed",
+        "error"
+      ]
+    },
+    {
+      "id": "PAGE-007",
+      "name": "Session Complete Toast",
+      "route": "toast:/session-complete",
+      "layoutRegions": [
+        "Body: Completion message + actions"
+      ],
+      "interactiveComponents": [
+        {
+          "id": "CMP-043",
+          "name": "Dismiss Button",
+          "type": "icon-button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Toast hides"
+        },
+        {
+          "id": "CMP-044",
+          "name": "Start Next Button",
+          "type": "button",
+          "location": "Body",
+          "interaction": "Click",
+          "effect": "Starts next session or switches mode"
+        }
+      ],
+      "staticElements": [
+        "Completion message"
+      ],
+      "states": [
+        "default"
+      ]
+    }
+  ],
+  "allComponentIds": [
+    "CMP-001",
+    "CMP-002",
+    "CMP-003",
+    "CMP-004",
+    "CMP-005",
+    "CMP-006",
+    "CMP-007",
+    "CMP-008",
+    "CMP-009",
+    "CMP-010",
+    "CMP-011",
+    "CMP-012",
+    "CMP-013",
+    "CMP-014",
+    "CMP-015",
+    "CMP-016",
+    "CMP-017",
+    "CMP-018",
+    "CMP-019",
+    "CMP-020",
+    "CMP-021",
+    "CMP-022",
+    "CMP-023",
+    "CMP-024",
+    "CMP-025",
+    "CMP-026",
+    "CMP-027",
+    "CMP-028",
+    "CMP-029",
+    "CMP-030",
+    "CMP-031",
+    "CMP-032",
+    "CMP-033",
+    "CMP-034",
+    "CMP-035",
+    "CMP-036",
+    "CMP-037",
+    "CMP-038",
+    "CMP-039",
+    "CMP-040",
+    "CMP-041",
+    "CMP-042",
+    "CMP-043",
+    "CMP-044"
+  ]
+}

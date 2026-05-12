@@ -1,0 +1,33 @@
+{
+  "id": "TH-fbb5a637-505c-4c04-ae47-b16079e9af53-kickoff",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "kickoff (failed)",
+  "tags": [
+    "kickoff:fbb5a637-505c-4c04-ae47-b16079e9af53",
+    "taskId:kickoff",
+    "status:failed",
+    "task-kind:kickoff",
+    "failure-mode:permission-error",
+    "step:kickoff"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "fbb5a637-505c-4c04-ae47-b16079e9af53",
+    "taskId": "kickoff"
+  },
+  "createdAt": 1778554804015,
+  "updatedAt": 1778554813051,
+  "schemaVersion": 1,
+  "body": {
+    "status": "failed",
+    "attempts": 1,
+    "durationMs": 3181,
+    "files": [],
+    "errorMessage": "OpenRouter API error: 403 - {\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403}}",
+    "startedAt": 1778554809870,
+    "endedAt": 1778554813051,
+    "taskKind": "kickoff",
+    "failureMode": "permission-error"
+  }
+}

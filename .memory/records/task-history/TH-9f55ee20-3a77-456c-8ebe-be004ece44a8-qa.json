@@ -1,0 +1,30 @@
+{
+  "id": "TH-9f55ee20-3a77-456c-8ebe-be004ece44a8-qa",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "qa (completed)",
+  "tags": [
+    "kickoff:9f55ee20-3a77-456c-8ebe-be004ece44a8",
+    "taskId:qa",
+    "status:completed",
+    "step:qa"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "9f55ee20-3a77-456c-8ebe-be004ece44a8",
+    "taskId": "qa"
+  },
+  "createdAt": 1778138778494,
+  "updatedAt": 1778138778495,
+  "schemaVersion": 1,
+  "body": {
+    "status": "completed",
+    "attempts": 1,
+    "costUsd": 0,
+    "durationMs": 0,
+    "totalTokens": 0,
+    "files": [],
+    "startedAt": 1778138778494,
+    "endedAt": 1778138778494
+  }
+}

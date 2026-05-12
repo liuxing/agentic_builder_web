@@ -1,0 +1,30 @@
+{
+  "id": "TH-39538ba2-a428-482b-be69-9d8e2195789e-prd",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "prd (completed)",
+  "tags": [
+    "kickoff:39538ba2-a428-482b-be69-9d8e2195789e",
+    "taskId:prd",
+    "status:completed",
+    "step:prd"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "39538ba2-a428-482b-be69-9d8e2195789e",
+    "taskId": "prd"
+  },
+  "createdAt": 1778138897323,
+  "updatedAt": 1778138950257,
+  "schemaVersion": 1,
+  "body": {
+    "status": "completed",
+    "attempts": 1,
+    "costUsd": 0,
+    "durationMs": 52932,
+    "totalTokens": 10974,
+    "files": [],
+    "startedAt": 1778138897323,
+    "endedAt": 1778138950257
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "TH-9f55ee20-3a77-456c-8ebe-be004ece44a8-implguide",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "implguide (completed)",
+  "tags": [
+    "kickoff:9f55ee20-3a77-456c-8ebe-be004ece44a8",
+    "taskId:implguide",
+    "status:completed",
+    "step:implguide"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "9f55ee20-3a77-456c-8ebe-be004ece44a8",
+    "taskId": "implguide"
+  },
+  "createdAt": 1778138778491,
+  "updatedAt": 1778138778491,
+  "schemaVersion": 1,
+  "body": {
+    "status": "completed",
+    "attempts": 1,
+    "costUsd": 0,
+    "durationMs": 0,
+    "totalTokens": 0,
+    "files": [],
+    "startedAt": 1778138778491,
+    "endedAt": 1778138778491
+  }
+}

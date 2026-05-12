@@ -1,0 +1,26 @@
+{
+  "id": "TH-9f55ee20-3a77-456c-8ebe-be004ece44a8-mockup",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "mockup (in_progress)",
+  "tags": [
+    "kickoff:9f55ee20-3a77-456c-8ebe-be004ece44a8",
+    "taskId:mockup",
+    "status:in_progress",
+    "step:mockup"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "9f55ee20-3a77-456c-8ebe-be004ece44a8",
+    "taskId": "mockup"
+  },
+  "createdAt": 1778138778494,
+  "updatedAt": 1778138778494,
+  "schemaVersion": 1,
+  "body": {
+    "status": "in_progress",
+    "attempts": 1,
+    "files": [],
+    "startedAt": 1778138778494
+  }
+}

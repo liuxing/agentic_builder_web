@@ -1,0 +1,33 @@
+{
+  "id": "TH-533b410b-3889-4fd5-b7fd-6490e456427f-prd",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "prd (failed)",
+  "tags": [
+    "kickoff:533b410b-3889-4fd5-b7fd-6490e456427f",
+    "taskId:prd",
+    "status:failed",
+    "task-kind:prd",
+    "failure-mode:unknown",
+    "step:prd"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "533b410b-3889-4fd5-b7fd-6490e456427f",
+    "taskId": "prd"
+  },
+  "createdAt": 1778555067384,
+  "updatedAt": 1778555068370,
+  "schemaVersion": 1,
+  "body": {
+    "status": "failed",
+    "attempts": 1,
+    "durationMs": 988,
+    "files": [],
+    "errorMessage": "Stream error: 500 - Internal Server Error",
+    "startedAt": 1778555067382,
+    "endedAt": 1778555068370,
+    "taskKind": "prd",
+    "failureMode": "unknown"
+  }
+}
