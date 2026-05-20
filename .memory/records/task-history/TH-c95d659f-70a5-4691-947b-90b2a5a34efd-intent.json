@@ -1,0 +1,28 @@
+{
+  "id": "TH-c95d659f-70a5-4691-947b-90b2a5a34efd-intent",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "intent (completed)",
+  "tags": [
+    "kickoff:c95d659f-70a5-4691-947b-90b2a5a34efd",
+    "taskId:intent",
+    "status:completed",
+    "task-kind:intent",
+    "step:intent"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "c95d659f-70a5-4691-947b-90b2a5a34efd",
+    "taskId": "intent"
+  },
+  "createdAt": 1778743483343,
+  "updatedAt": 1778743483343,
+  "schemaVersion": 1,
+  "body": {
+    "status": "completed",
+    "attempts": 1,
+    "files": [],
+    "endedAt": 1778743483342,
+    "taskKind": "intent"
+  }
+}

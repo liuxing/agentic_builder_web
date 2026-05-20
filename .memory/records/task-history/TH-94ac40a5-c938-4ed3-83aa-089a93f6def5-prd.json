@@ -1,0 +1,28 @@
+{
+  "id": "TH-94ac40a5-c938-4ed3-83aa-089a93f6def5-prd",
+  "layer": "L2",
+  "kind": "task-history",
+  "title": "prd (in_progress)",
+  "tags": [
+    "kickoff:94ac40a5-c938-4ed3-83aa-089a93f6def5",
+    "taskId:prd",
+    "status:in_progress",
+    "task-kind:prd",
+    "step:prd"
+  ],
+  "source": "orchestrator",
+  "refs": {
+    "kickoffId": "94ac40a5-c938-4ed3-83aa-089a93f6def5",
+    "taskId": "prd"
+  },
+  "createdAt": 1778742813243,
+  "updatedAt": 1778742813243,
+  "schemaVersion": 1,
+  "body": {
+    "status": "in_progress",
+    "attempts": 1,
+    "files": [],
+    "startedAt": 1778742813243,
+    "taskKind": "prd"
+  }
+}
